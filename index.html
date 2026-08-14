@@ -332,6 +332,25 @@ border-bottom: none;
   </style>
 </head>
 <body>
+  <div style="text-align: right; padding: 10px 0 5px 0; background: #f8f9fa; border-radius: 0 0 12px 12px; margin-bottom: 5px;">
+    <button id="versionToggle" style="
+        position: sticky;
+        top: 0;
+        z-index: 9999;  
+        background: #1a5c9e;
+        color: white;
+        border: none;
+        padding: 8px 18px;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: 0.2s;
+    ">
+        <i class="fas fa-eye"></i> Версия для слабовидящих
+    </button>
+</div>
   <div class="container">
 
     <!-- ====== 1. ШАПКА: ФИО, специализация, услуги, контакты ====== -->
@@ -665,5 +684,102 @@ border-bottom: none;
       updateCarousel(0);
     })();
   </script>
+<script>
+    // ======= ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ =======
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleBtn = document.getElementById('versionToggle');
+        let isVersionActive = false;
+
+        // Функция включения/выключения
+        function toggleVersion() {
+            isVersionActive = !isVersionActive;
+            const body = document.body;
+
+            if (isVersionActive) {
+                // Включаем режим
+                body.style.fontSize = '1.3rem';
+                body.style.lineHeight = '1.8';
+                body.style.backgroundColor = '#000000';
+                body.style.color = '#FFFF00'; // Жёлтый текст на чёрном
+
+                // Все заголовки
+                document.querySelectorAll('h1, h2, h3, h4, .doctor-name, .carousel-title').forEach(el => {
+                    el.style.color = '#FFFFFF';
+                    el.style.fontSize = '2.2rem';
+                });
+
+                // Все ссылки
+                document.querySelectorAll('a').forEach(el => {
+                    el.style.color = '#00FFFF';
+                    el.style.fontSize = '1.2rem';
+                    el.style.textDecoration = 'underline';
+                });
+
+                // Все кнопки
+                document.querySelectorAll('button, .carousel-btn, .doctor-specialty, .contact-block, .qualification-block, .price-block, .info-block').forEach(el => {
+                    el.style.backgroundColor = '#222222';
+                    el.style.color = '#FFFF00';
+                    el.style.borderColor = '#FFFF00';
+                });
+
+                // Специально для блоков с белым фоном
+                document.querySelectorAll('.contact-block, .qualification-block, .price-block, .info-block, .carousel-slide, .carousel-wrapper, .doctor-header').forEach(el => {
+                    el.style.backgroundColor = '#111111';
+                    el.style.color = '#FFFF00';
+                    el.style.border = '2px solid #FFFF00';
+                });
+
+                // Картинки — делаем ярче
+                document.querySelectorAll('img').forEach(el => {
+                    el.style.filter = 'brightness(1.2) contrast(1.1)';
+                    el.style.border = '3px solid #FFFF00';
+                });
+
+                toggleBtn.textContent = 'Обычная версия';
+                toggleBtn.style.backgroundColor = '#FF4444';
+
+            } else {
+                // Выключаем режим (возвращаем как было)
+                body.style.fontSize = '';
+                body.style.lineHeight = '';
+                body.style.backgroundColor = '';
+                body.style.color = '';
+
+                document.querySelectorAll('h1, h2, h3, h4, .doctor-name, .carousel-title').forEach(el => {
+                    el.style.color = '';
+                    el.style.fontSize = '';
+                });
+
+                document.querySelectorAll('a').forEach(el => {
+                    el.style.color = '';
+                    el.style.fontSize = '';
+                    el.style.textDecoration = '';
+                });
+
+                document.querySelectorAll('button, .carousel-btn, .doctor-specialty, .contact-block, .qualification-block, .price-block, .info-block').forEach(el => {
+                    el.style.backgroundColor = '';
+                    el.style.color = '';
+                    el.style.borderColor = '';
+                });
+
+                document.querySelectorAll('.contact-block, .qualification-block, .price-block, .info-block, .carousel-slide, .carousel-wrapper, .doctor-header').forEach(el => {
+                    el.style.backgroundColor = '';
+                    el.style.color = '';
+                    el.style.border = '';
+                });
+
+                document.querySelectorAll('img').forEach(el => {
+                    el.style.filter = '';
+                    el.style.border = '';
+                });
+
+                toggleBtn.textContent = 'Версия для слабовидящих';
+toggleBtn.style.backgroundColor = '#1a5c9e';
+            }
+        }
+
+        toggleBtn.addEventListener('click', toggleVersion);
+    });
+</script>
 </body>
 </html>
