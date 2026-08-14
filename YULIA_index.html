@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title> Медведева Юлия Александровна | ЭНМГ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #1e2a3a;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 1.5rem 1.2rem;
+    }
+
+    /* === РАЗДЕЛИТЕЛЬНЫЕ ЛИНИИ (СИНИЕ) === */
+    .divider {
+      border: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #1a5c9e 0%, #3b8cd4 100%);
+      margin: 2rem 0;
+      border-radius: 2px;
+      opacity: 0.7;
+    }
+
+    /* === 1. ШАПКА С ИНФОРМАЦИЕЙ === */
+    .doctor-header {
+      text-align: center;
+      padding: 0.5rem 0 0.5rem;
+    }
+
+    .doctor-name {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0b2b4a;
+      line-height: 1.2;
+      margin-bottom: 0.3rem;
+    }
+
+    .doctor-specialty {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1a5c9e;
+      background: #eef5fc;
+      padding: 0.3rem 1.5rem;
+      border-radius: 40px;
+      display: inline-block;
+      margin-bottom: 0.8rem;
+    }
+
+    .services-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem 1rem;
+      margin: 0.8rem 0 1rem;
+      font-weight: 500;
+      color: #1e3a5f;
+    }
+
+    .services-list span {
+      background: #f0f4fa;
+      padding: 0.2rem 1rem;
+      border-radius: 20px;
+      font-size: 0.95rem;
+    }
+
+    .contact-block {
+      background: #f8fafc;
+      border-radius: 20px;
+      padding: 1rem 1.2rem;
+      border: 1px solid #dce7f2;
+      margin-top: 0.5rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #0b2b4a;
+      margin: 0.3rem 0;
+      flex-wrap: wrap;
+    }
+
+    .contact-item i {
+      color: #1a5c9e;
+      width: 1.6rem;
+      font-size: 1.1rem;
+    }
+
+    .contact-item a {
+      color: #0b2b4a;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .address-time {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      margin-top: 0.5rem;
+      border-top: 1px dashed #cbdae9;
+      padding-top: 0.7rem;
+    }
+
+    /* === 2. БОЛЬШОЕ ФОТО (не фоновое) === */
+    .main-photo {
+      width: 100%;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 20, 40, 0.08);
+      margin: 0.5rem 0 0.5rem;
+      border: 1px solid #e8edf2;
+    }
+
+    .main-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+    }
+
+    /* === 3. КВАЛИФИКАЦИЯ === */
+    .qualification-block {
+      background: #f8fafc;
+      border-radius: 20px;
+      padding: 1.5rem 1.2rem;
+      border: 1px solid #dce7f2;
+      margin: 0.5rem 0 0.5rem;
+    }
+
+    .qualification-block h2 {
+      font-size: 1.3rem;
+      color: #0b2b4a;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .qualification-block h2 i {
+      color: #1a5c9e;
+    }
+
+    .qualification-block ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .qualification-block ul li {
+      padding: 0.4rem 0 0.4rem 1.8rem;
+      position: relative;
+      border-bottom: 1px solid #e8edf2;
+      font-size: 0.98rem;
+    }
+
+    .qualification-block ul li:last-child {
+04:42 PM
+
+
+border-bottom: none;
+    }
+
+    .qualification-block ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #1a5c9e;
+      font-weight: 700;
+    }
+
+    /* === 4. КАРУСЕЛЬ ОТЗЫВОВ === */
+    .carousel-section {
+      margin: 0.5rem 0 0.5rem;
+    }
+
+    .carousel-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #0b2b4a;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .carousel-title i {
+      color: #1a5c9e;
+    }
+
+    .carousel-wrapper {
+      overflow: hidden;
+      border-radius: 24px;
+      background: #ffffff;
+      box-shadow: 0 4px 16px rgba(0, 20, 40, 0.06);
+      border: 1px solid #dce7f2;
+    }
+
+    .carousel-track-container {
+      overflow: hidden;
+      border-radius: 24px;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.4s ease;
+      will-change: transform;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      padding: 1rem 1.2rem 1.5rem;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 16px;
+      background: #eaf2fa;
+      margin-bottom: 0.8rem;
+    }
+
+    .slide-caption {
+      font-weight: 500;
+      color: #1e2a3a;
+      font-size: 0.98rem;
+    }
+
+    .slide-caption small {
+      display: block;
+      font-weight: 400;
+      color: #4a647e;
+      margin-top: 0.2rem;
+      font-size: 0.85rem;
+    }
+
+    .carousel-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.2rem;
+      margin-top: 0.8rem;
+      padding-bottom: 0.2rem;
+    }
+
+    .carousel-btn {
+      background: #ffffff;
+      border: 1px solid #b6cee6;
+      color: #1a5c9e;
+      width: 44px;
+      height: 44px;
+      border-radius: 40px;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .carousel-btn:hover {
+      background: #eef5fc;
+      border-color: #1a5c9e;
+    }
+
+    .carousel-btn:active {
+      transform: scale(0.94);
+    }
+
+    .carousel-dots {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 10px;
+      background: #c5d8ea;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background: #1a5c9e;
+      width: 22px;
+    }
+
+    .footer-note {
+      font-size: 0.85rem;
+      color: #4a647e;
+      text-align: center;
+      margin-top: 1.8rem;
+      border-top: 1px solid #dce7f2;
+      padding-top: 1.2rem;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 1rem 0.8rem; }
+      .doctor-name { font-size: 1.6rem; }
+      .contact-item { font-size: 0.95rem; }
+    }
+
+    button {
+      background: none;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- ====== 1. ШАПКА: ФИО, специализация, услуги, контакты ====== -->
+    <div class="doctor-header">
+      <h1 class="doctor-name">Юлия Александровна<br>Медведьева</h1>
+      <div class="doctor-specialty">
+        <i class="fas fa-bolt"></i> Врач функциональной диагностики
+      </div>
+
+      <div class="services-list">
+        <span>ЭМГ</span>
+        <span>ЭНМГ</span>
+        <span>Стимуляционная ЭНМГ</span>
+        <span>Игольчатая ЭМГ</span>
+      </div>
+
+      <div class="contact-block">
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:+79950090207">+7 995 009-02-07</a>
+        </div>
+        <div class="address-time">
+          <div class="contact-item" style="justify-content: flex-start; gap: 0.4rem;">
+            <i class="fas fa-map-pin"></i>
+            <span>г. Набережные Челны, ул. Виктора Полякова, 2</span>
+          </div>
+04:42 PM
+<div class="contact-item" style="justify-content: flex-start; gap: 0.4rem; margin-top: 0.2rem;">
+            <i class="far fa-clock"></i>
+            <span><strong>Часы работы:</strong> 09:00 – 15:00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- СИНЯЯ РАЗДЕЛИТЕЛЬНАЯ ЛИНИЯ -->
+    <hr class="divider">
+
+    <!-- ====== 2. БОЛЬШОЕ ФОТО ====== -->
+    <div class="main-photo">
+      <img src="doctor-main.jpg" alt="Юлия Александровна Медведьева — врач функциональной диагностики">
+    </div>
+
+    <!-- СИНЯЯ РАЗДЕЛИТЕЛЬНАЯ ЛИНИЯ -->
+    <hr class="divider">
+
+    <!-- ====== 3. КВАЛИФИКАЦИЯ ====== -->
+    <div class="qualification-block">
+      <h2><i class="fas fa-graduation-cap"></i> Образование и опыт</h2>
+      <ul>
+        <li><strong>Ижевская государственная медицинская академия</strong> — лечебное дело (2010–2016)</li>
+        <li><strong>Ординатура по неврологии</strong> — КГМА (2016–2018)</li>
+        <li><strong>Профессиональная переподготовка</strong> по функциональной диагностике (2019)</li>
+        <li><strong>Опыт работы</strong> — 10 лет, более 5000 проведённых исследований</li>
+        <li><strong>Сертификат специалиста</strong> по ЭНМГ и ЭМГ (действителен до 2027)</li>
+        <li><strong>Член Российской ассоциации функциональной диагностики</strong></li>
+      </ul>
+    </div>
+
+    <!-- СИНЯЯ РАЗДЕЛИТЕЛЬНАЯ ЛИНИЯ -->
+    <hr class="divider">
+
+    <!-- ====== 4. ГОРИЗОНТАЛЬНАЯ КАРУСЕЛЬ ОТЗЫВОВ ====== -->
+    <div class="carousel-section">
+      <div class="carousel-title">
+        <i class="fas fa-star"></i> Отзывы пациентов
+      </div>
+
+      <div class="carousel-wrapper">
+        <div class="carousel-track-container">
+          <div class="carousel-track" id="carouselTrack">
+            <!-- Слайд 1 -->
+            <div class="carousel-slide">
+              <img src="review1.jpg" alt="Отзыв пациента 1">
+              <div class="slide-caption">
+                “Очень внимательный специалист, всё понятно объяснила. Процедура прошла комфортно.”
+                <small>— Анна, 34 года</small>
+              </div>
+            </div>
+            <!-- Слайд 2 -->
+            <div class="carousel-slide">
+              <img src="review2.jpg" alt="Отзыв пациента 2">
+              <div class="slide-caption">
+                “Благодаря ЭНМГ поставили точный диагноз. Огромное спасибо Юлии Александровне!”
+                <small>— Михаил, 52 года</small>
+              </div>
+            </div>
+            <!-- Слайд 3 -->
+            <div class="carousel-slide">
+              <img src="review3.jpg" alt="Отзыв пациента 3">
+              <div class="slide-caption">
+                “Чуткий подход, располагает к себе. Рекомендую всем, кто боится процедур.”
+                <small>— Екатерина, 29 лет</small>
+              </div>
+            </div>
+            <!-- Слайд 4 -->
+            <div class="carousel-slide">
+              <img src="review4.jpg" alt="Отзыв пациента 4">
+              <div class="slide-caption">
+                “Профессионал с большой буквы. Результаты точные, расшифровка подробная.”
+                <small>— Дмитрий, 45 лет</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="prevBtn" aria-label="Назад">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="carousel-dots" id="carouselDots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <button class="carousel-btn" id="nextBtn" aria-label="Вперед">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ПОДВАЛ -->
+    <div class="footer-note">
+      <i class="fas fa-phone" style="margin-right: 6px;"></i>
+04:42 PM
+Запись по телефону: <a href="tel:+79950090207" style="color: #1a5c9e; font-weight: 600; text-decoration: none;">+7 995 009-02-07</a>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      const track = document.getElementById('carouselTrack');
+      const slides = Array.from(track.children);
+      const dots = document.querySelectorAll('.dot');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+
+      let currentIndex = 0;
+      const totalSlides = slides.length;
+      let autoplayInterval = null;
+
+      function updateCarousel(index) {
+        if (index < 0) index = totalSlides - 1;
+        if (index >= totalSlides) index = 0;
+        currentIndex = index;
+
+        const offset = -currentIndex * 100;
+        track.style.transform = `translateX(${offset}%)`;
+
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === currentIndex);
+        });
+      }
+
+      function nextSlide() { updateCarousel(currentIndex + 1); }
+      function prevSlide() { updateCarousel(currentIndex - 1); }
+
+      prevBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        prevSlide();
+        resetAutoplay();
+      });
+
+      nextBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        nextSlide();
+        resetAutoplay();
+      });
+
+      dots.forEach((dot, idx) => {
+        dot.addEventListener('click', function() {
+          updateCarousel(idx);
+          resetAutoplay();
+        });
+      });
+
+      function startAutoplay() {
+        if (autoplayInterval) clearInterval(autoplayInterval);
+        autoplayInterval = setInterval(nextSlide, 4500);
+      }
+
+      function resetAutoplay() {
+        if (autoplayInterval) {
+          clearInterval(autoplayInterval);
+          autoplayInterval = null;
+        }
+        startAutoplay();
+      }
+
+      startAutoplay();
+
+      const carouselWrapper = document.querySelector('.carousel-wrapper');
+      carouselWrapper.addEventListener('mouseenter', function() {
+        if (autoplayInterval) {
+          clearInterval(autoplayInterval);
+          autoplayInterval = null;
+        }
+      });
+      carouselWrapper.addEventListener('mouseleave', function() {
+        if (!autoplayInterval) startAutoplay();
+      });
+
+      carouselWrapper.addEventListener('touchstart', function() {
+        resetAutoplay();
+      }, { passive: true });
+
+      updateCarousel(0);
+    })();
+  </script>
+</body>
+</html>
