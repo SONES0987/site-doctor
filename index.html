@@ -909,7 +909,8 @@ toggleBtn.style.backgroundColor = '#1a5c9e';
     window.showCookieInfo = showCookieInfo;
 </script>
   
-<!-- ====== КОНТРОЛИРУЮЩИЕ ОРГАНЫ (ПОДВАЛ) ====== -->
+
+  <!-- ====== КОНТРОЛИРУЮЩИЕ ОРГАНЫ И ДОКУМЕНТЫ (ПОДВАЛ) ====== -->
 <div style="
     margin-top: 2rem;
     padding: 1.2rem 1rem 0.5rem 1rem;
@@ -920,7 +921,7 @@ toggleBtn.style.backgroundColor = '#1a5c9e';
     color: #4a647e;
     line-height: 1.6;
 ">
-    <!-- Заголовок-спойлер (можно раскрыть) -->
+    <!-- Заголовок-спойлер -->
     <details style="cursor: pointer;">
         <summary style="
             font-weight: 600;
@@ -934,12 +935,25 @@ toggleBtn.style.backgroundColor = '#1a5c9e';
             gap: 0.5rem;
         ">
             <i class="fas fa-chevron-right" id="arrowIcon" style="transition: 0.3s; font-size: 0.7rem;"></i>
-            <i class="fas fa-balance-scale"></i> Контролирующие органы
+            <i class="fas fa-balance-scale"></i> Документы и контролирующие органы
         </summary>
 
-        <!-- Содержание (скрыто по умолчанию) -->
+        <!-- Содержание -->
         <div style="padding: 0.8rem 0 0.2rem 0; display: flex; flex-direction: column; gap: 0.6rem;">
-            
+
+            <!-- === ДОГОВОР === -->
+            <div style="border-left: 3px solid #1a5c9e; padding-left: 0.8rem;">
+                <div style="font-weight: 600; color: #0b2b4a;">
+                    <i class="fas fa-file-pdf" style="color: #1a5c9e;"></i> 
+                    <a href="dogovor.pdf" target="_blank" style="color: #0b2b4a; text-decoration: none; border-bottom: 1px dashed #1a5c9e;">
+                        Образец договора на оказание медицинских услуг
+                    </a>
+                </div>
+                <div style="font-size: 0.78rem; color: #4a647e; margin-top: 0.1rem;">
+                    <i class="fas fa-info-circle"></i> Скачайте PDF-файл для ознакомления
+                </div>
+            </div>
+
             <!-- Минздрав РТ -->
             <div style="border-left: 3px solid #1a5c9e; padding-left: 0.8rem;">
                 <div style="font-weight: 600; color: #0b2b4a;">Министерство здравоохранения Республики Татарстан</div>
