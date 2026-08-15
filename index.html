@@ -880,6 +880,92 @@ toggleBtn.style.backgroundColor = '#1a5c9e';
     window.showCookieInfo = showCookieInfo;
 </script>
   
-  
+<!-- ====== КОНТРОЛИРУЮЩИЕ ОРГАНЫ (ПОДВАЛ) ====== -->
+<div style="
+    margin-top: 2rem;
+    padding: 1.2rem 1rem 0.5rem 1rem;
+    border-top: 2px solid #1a5c9e;
+    background: #f8fafc;
+    border-radius: 16px 16px 0 0;
+    font-size: 0.8rem;
+    color: #4a647e;
+    line-height: 1.6;
+">
+    <!-- Заголовок-спойлер (можно раскрыть) -->
+    <details style="cursor: pointer;">
+        <summary style="
+            font-weight: 600;
+            color: #1a5c9e;
+            font-size: 0.85rem;
+            padding: 0.3rem 0;
+            user-select: none;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        ">
+            <i class="fas fa-chevron-right" id="arrowIcon" style="transition: 0.3s; font-size: 0.7rem;"></i>
+            <i class="fas fa-balance-scale"></i> Контролирующие органы
+        </summary>
+
+        <!-- Содержание (скрыто по умолчанию) -->
+        <div style="padding: 0.8rem 0 0.2rem 0; display: flex; flex-direction: column; gap: 0.6rem;">
+            
+            <!-- Минздрав РТ -->
+            <div style="border-left: 3px solid #1a5c9e; padding-left: 0.8rem;">
+                <div style="font-weight: 600; color: #0b2b4a;">Министерство здравоохранения Республики Татарстан</div>
+                <div style="font-size: 0.78rem; color: #4a647e;">
+                    <i class="fas fa-map-pin" style="width: 16px;"></i> 420012, г. Казань, ул. Бутлерова, д. 40/11
+                </div>
+                <div style="font-size: 0.78rem; color: #4a647e;">
+                    <i class="fas fa-phone" style="width: 16px;"></i> 
+                    <a href="tel:+78432227020" style="color: #1a5c9e; text-decoration: none;">+7 (843) 222-70-20</a>
+                </div>
+            </div>
+
+            <!-- Росздравнадзор -->
+            <div style="border-left: 3px solid #1a5c9e; padding-left: 0.8rem;">
+                <div style="font-weight: 600; color: #0b2b4a;">Росздравнадзор</div>
+                <div style="font-size: 0.78rem; color: #4a647e;">
+                    <i class="fas fa-map-pin" style="width: 16px;"></i> 109012, Москва, Славянская площадь, д. 4, стр. 1
+                </div>
+                <div style="font-size: 0.78rem; color: #4a647e;">
+                    <i class="fas fa-phone" style="width: 16px;"></i> 
+                    <a href="tel:+74995780220" style="color: #1a5c9e; text-decoration: none;">+7 (499) 578-02-20</a>
+                </div>
+            </div>
+
+            <!-- Роспотребнадзор -->
+            <div style="border-left: 3px solid #1a5c9e; padding-left: 0.8rem;">
+                <div style="font-weight: 600; color: #0b2b4a;">Роспотребнадзор</div>
+                <div style="font-size: 0.78rem; color: #4a647e;">
+                    <i class="fas fa-map-pin" style="width: 16px;"></i> 127994, г. Москва, Вадковский переулок, д. 18, стр. 5 и 7
+                </div>
+                <div style="font-size: 0.78rem; color: #4a647e;">
+                    <i class="fas fa-phone" style="width: 16px;"></i> 
+                    <a href="tel:+74999732690" style="color: #1a5c9e; text-decoration: none;">+7 (499) 973-26-90</a>
+                </div>
+            </div>
+
+        </div>
+    </details>
+</div>
+
+<!-- Скрипт для анимации стрелки -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const details = document.querySelector('details');
+        const arrow = document.getElementById('arrowIcon');
+        if (details && arrow) {
+            details.addEventListener('toggle', function() {
+                if (details.open) {
+                    arrow.style.transform = 'rotate(90deg)';
+                } else {
+                    arrow.style.transform = 'rotate(0deg)';
+                }
+            });
+        }
+    });
+</script>
 </body>
 </html>
